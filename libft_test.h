@@ -6,7 +6,7 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:11:39 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/10 14:10:50 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/10 17:34:59 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ void	test_ft_split(void);
 void	test_ft_calloc(void);
 void	test_ft_memchr(void);
 void 	test_ft_atoi(void);
+void 	test_ft_bzero();
 void	run_function_tests(void (*f)(void), const char *function_name);
 #endif
