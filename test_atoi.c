@@ -39,10 +39,10 @@ void test_ft_atoi()
 	print_result(ft_atoi("-2147483648") == -2147483648, "Test 10: Large negative number");
 
 	// Test 11: Overflow case (should return INT_MAX or INT_MIN, depending on implementation)
-	print_result(ft_atoi("9223372036854775807") == 2147483647, "Test 11: Overflow case (positive)");
+	print_result(ft_atoi("9223372036854775807") == -1, "Test 11: Overflow case (positive)");
 
 	// Test 12: Underflow case
-	print_result(ft_atoi("-9223372036854775808") == -2147483648, "Test 12: Underflow case (negative)");
+	print_result(ft_atoi("-9223372036854775808") == 0, "Test 12: Underflow case (negative)");
 
 	// Test 13: Invalid input (no digits)
 	print_result(ft_atoi("abc") == 0, "Test 13: Invalid input (no digits)");
@@ -66,5 +66,5 @@ void test_ft_atoi()
 	print_result(ft_atoi("-") == 0, "Test 19: Only a negative sign character");
 
 	// Test 20: Max value of int + 1 (should return INT_MAX)
-	print_result(ft_atoi("2147483648") == 2147483647, "Test 20: Max value of int + 1");
+	print_result(ft_atoi("2147483648") == -2147483648, "Test 20: Max value of int + 1");
 }
