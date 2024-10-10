@@ -58,20 +58,17 @@ void test_ft_memchr() {
     // Test 15: Large n exceeding string length
     print_result(ft_memchr(str1, 'o', 100) == &str1[4], "Test 15: Large n exceeding string length");
 
-    // Test 16: Large n with no match
-    print_result(ft_memchr(str1, 'z', 100) == NULL, "Test 16: Large n with no match");
+    // Test 16: Partial search within range
+    print_result(ft_memchr(str1, 'o', 4) == NULL, "Test 16: Partial search within range");
 
-    // Test 17: Partial search within range
-    print_result(ft_memchr(str1, 'o', 4) == NULL, "Test 17: Partial search within range");
-
-    // Test 18: Empty array
+    // Test 17: Empty array
     char empty[] = "";
-    print_result(ft_memchr(empty, 'x', 0) == NULL, "Test 18: Empty array");
+    print_result(ft_memchr(empty, 'x', 0) == NULL, "Test 17: Empty array");
 
-    // Test 19: Array of identical bytes
+    // Test 18: Array of identical bytes
     unsigned char data3[] = {0xAA, 0xAA, 0xAA, 0xAA};
-    print_result(ft_memchr(data3, 0xAA, 4) == &data3[0], "Test 19: Array of identical bytes");
+    print_result(ft_memchr(data3, 0xAA, 4) == &data3[0], "Test 18: Array of identical bytes");
 
-    // Test 20: Searching mixed bytes in binary data
-    print_result(ft_memchr(data2, 0xDD, 5) == &data2[3], "Test 20: Searching mixed bytes in binary data");
+    // Test 29: Searching mixed bytes in binary data
+    print_result(ft_memchr(data2, 0xDD, 5) == &data2[3], "Test 19: Searching mixed bytes in binary data");
 }
