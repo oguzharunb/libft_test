@@ -1,4 +1,4 @@
-SRCS = main.c test_calloc.c test_memchr.c test_split.c test_atoi.c utils.c
+SRCS = main.c test_calloc.c test_memchr.c test_split.c test_atoi.c test_bzero.c utils.c
 OBJS = $(SRCS:.c=.o)
 NAME = tester.exe
 CC = gcc
